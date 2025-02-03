@@ -11,11 +11,11 @@ BOT_TOKEN = "7057194211:AAF_StFo_FwRn1AR_XOJQurXuYgh5ZvO2b4"
 CHAT_ID = "6260151149"
 
 import os
-print(os.path.abspath("chromedriver.exe"))
+print(os.path.abspath("chromedriver"))
 
 
 # Define the path to chromedriver
-CHROMEDRIVER_PATH = "chromedriver.exe" # Adjust if needed
+CHROMEDRIVER_PATH = "chromedriver" # Adjust if needed
 
 # Create a Service object for ChromeDriver
 service = Service(CHROMEDRIVER_PATH)
