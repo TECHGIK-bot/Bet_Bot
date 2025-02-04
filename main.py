@@ -10,14 +10,17 @@ import requests
 BOT_TOKEN = "7057194211:AAF_StFo_FwRn1AR_XOJQurXuYgh5ZvO2b4"
 CHAT_ID = "6260151149"
 
-# Path to chromedriver (update this path if needed)
-chromedriver_path = r'C:\Users\pstken\Desktop\bet9ja bot\chromedriver-win64\chromedriver-win64\chromedriver.exe'
+# Define the path to chromedriver
+CHROMEDRIVER_PATH = "chromedriver.exe" # Adjust if needed
 
-# Create a Service object
-service = Service(executable_path=chromedriver_path)
+# Create a Service object for ChromeDriver
+service = Service(CHROMEDRIVER_PATH)
 
-# Initialize WebDriver
-driver = webdriver.Chrome(service=service)
+# Set Chrome options (optional)
+options = webdriver.ChromeOptions()
+
+# Initialize the Chrome WebDriver
+driver = webdriver.Chrome(service=service, options=options)
 
 # Open the website
 driver.get('https://logigames.bet9ja.com/Games/Launcher?gameId=11000&provider=0&pff=1&skin=201')
